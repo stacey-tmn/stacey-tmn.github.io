@@ -183,12 +183,14 @@ label.f select{-webkit-appearance:none;appearance:none;background-image:linear-g
 .prices2 .price-plate .p{font-size:clamp(24px,3.2vw,40px)}
 @media (max-width:420px){.prices2 .price-plate{padding:16px 14px}.prices2 .price-plate .p{font-size:26px}}
 .who{background:#fff!important}
-.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.who img{aspect-ratio:2/3;object-fit:cover}
+.who figure:not(.host) img{object-fit:contain}
 .who figure{display:flex;flex-direction:column;align-items:center;text-align:center}
-.who img{height:min(620px,90vw);width:auto;max-width:100%;object-fit:contain}
-.who h3{font-size:clamp(28px,3.4vw,44px);margin:18px 0 10px;line-height:1.05}
+.who img{width:100%;height:auto;max-width:360px}
+.who h3{font-size:clamp(24px,2.6vw,36px);margin:18px 0 10px;line-height:1.05}
 .who p{max-width:380px}
-@media (max-width:620px){.who-grid{grid-template-columns:1fr 1fr;gap:14px}.who img{height:auto;width:100%;aspect-ratio:2/3;object-fit:contain}.who h3{font-size:21px;margin:12px 0 8px;white-space:nowrap}.who p{font-size:13px;line-height:1.4}}
+@media (max-width:620px){.who-grid{grid-template-columns:1fr 1fr;gap:14px}.who .host{grid-column:span 2}.who .host img{width:66%}.who img{height:auto;width:100%;aspect-ratio:2/3;object-fit:contain}.who h3{font-size:21px;margin:12px 0 8px;white-space:nowrap}.who p{font-size:13px;line-height:1.4}}
 /* FAQ */
 .faq details{border-bottom:1px solid var(--mist);padding:22px 0}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-family:var(--display);font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;letter-spacing:-.02em;line-height:1.1}
@@ -381,8 +383,9 @@ ym(114396730,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
 <!-- КТО ПРИЕДЕТ -->
 <section class="who" id="who">
   <div class="wrap">
-    <div class="sec-head"><div><h2>Кто к вам приедет</h2><p>Дед Мороз и Снегурочка с многолетним опытом аниматорства, качественными костюмами и лучшими программами для ваших мероприятий.</p></div></div>
+    <div class="sec-head"><div><h2>Кто к вам приедет</h2><p>Ведущая, Дед Мороз и Снегурочка с многолетним опытом, качественными костюмами и лучшими программами для ваших мероприятий. Образы бывают в трёх цветах: белом, синем и красном.</p></div></div>
     <div class="who-grid">
+      <figure class="host"><img src="host.jpg" alt="Ведущая Стейси"><figcaption><h3>Ведущая Стейси</h3><p>Ведущая мероприятий с пятилетним стажем.</p></figcaption></figure>
       <figure><img src="dm.jpg" alt="Дед Мороз"><figcaption><h3>Дед Мороз</h3><p>Бархатная шуба с серебряной вышивкой, пушистый белый мех и пышная борода.</p></figcaption></figure>
       <figure><img src="sneg.jpg" alt="Снегурочка"><figcaption><h3>Снегурочка</h3><p>Наряд с серебряной вышивкой и кокошник с жемчугом. Заводит хороводы и помогает самым стеснительным.</p></figcaption></figure>
     </div>
